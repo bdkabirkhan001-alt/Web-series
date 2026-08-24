@@ -1,33 +1,17 @@
 backend:
-  name: github
-  repo: bdkabirkhan001-alt/Web-series
-  branch: main
+  name: git-gateway
+  branch: main # আপনার গিটহাব ব্রাঞ্চ যদি master হয় তবে master লিখবেন
 
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
+media_folder: "assets"
+public_folder: "/assets"
 
 collections:
-  - name: "posts"
+  - name: "series"
     label: "Series"
     folder: "posts"
     create: true
     slug: "{{slug}}"
-    format: "json"
-    extension: "json"
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Poster", name: "image", widget: "image"}
-      - {label: "Genre", name: "genre", widget: "string"}
-      - {label: "Year", name: "year", widget: "string", required: false}
-      - {label: "Description", name: "description", widget: "text"}
-      - label: "Seasons"
-        name: "seasons"
-        widget: "list"
-        fields:
-          - {label: "Season Name", name: "name", widget: "string"}
-          - label: "Episodes"
-            name: "episodes"
-            widget: "list"
-            fields:
-              - {label: "Episode Name", name: "name", widget: "string"}
-              - {label: "Description", name: "description", widget: "text", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+      
