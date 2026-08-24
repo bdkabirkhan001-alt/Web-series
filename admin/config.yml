@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: YOUR_GITHUB_USERNAME/YOUR_REPOSITORY
+  repo: bdkabirkhan001-alt/Web-series
   branch: main
 
 media_folder: "images/uploads"
