@@ -2,7 +2,7 @@ backend:
   name: github
   repo: bdkabirkhan001-alt/Web-series
   branch: main
-  base_url: https://decap-cms-oauth-provider.vercel.app
+  base_url: https://decap-cms-oauth-pk.vercel.app
   auth_endpoint: /auth
 
 media_folder: "assets"
@@ -17,4 +17,3 @@ collections:
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
-      
