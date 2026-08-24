@@ -1,0 +1,22 @@
+{
+  "title": "Sample Hindi Series",
+  "image": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=700&q=80",
+  "genre": "Drama",
+  "year": "2026",
+  "description": "Demo entry. Replace with your own legally published or licensed series information.",
+  "seasons": [
+    {
+      "name": "Season 1",
+      "episodes": [
+        {
+          "name": "Episode 1",
+          "description": "Episode guide placeholder."
+        },
+        {
+          "name": "Episode 2",
+          "description": "Episode guide placeholder."
+        }
+      ]
+    }
+  ]
+}
