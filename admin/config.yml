@@ -1,7 +1,9 @@
 backend:
   name: github
-  repo: bdkabirkhan001-alt/Web-series # আপনার GitHub username/repo_name
-  branch: main # repository-র শাখা (main/master)
+  repo: bdkabirkhan001-alt/Web-series
+  branch: main
+  base_url: https://decap-cms-oauth-provider.vercel.app
+  auth_endpoint: /auth
 
 media_folder: "assets"
 public_folder: "/assets"
