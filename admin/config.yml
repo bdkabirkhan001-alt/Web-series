@@ -1,0 +1,33 @@
+backend:
+  name: github
+  repo: YOUR_GITHUB_USERNAME/YOUR_REPOSITORY
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "posts"
+    label: "Series"
+    folder: "posts"
+    create: true
+    slug: "{{slug}}"
+    format: "json"
+    extension: "json"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Poster", name: "image", widget: "image"}
+      - {label: "Genre", name: "genre", widget: "string"}
+      - {label: "Year", name: "year", widget: "string", required: false}
+      - {label: "Description", name: "description", widget: "text"}
+      - label: "Seasons"
+        name: "seasons"
+        widget: "list"
+        fields:
+          - {label: "Season Name", name: "name", widget: "string"}
+          - label: "Episodes"
+            name: "episodes"
+            widget: "list"
+            fields:
+              - {label: "Episode Name", name: "name", widget: "string"}
+              - {label: "Description", name: "description", widget: "text", required: false}
