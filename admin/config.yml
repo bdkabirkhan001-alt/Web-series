@@ -1,6 +1,7 @@
 backend:
-  name: git-gateway
-  branch: main # আপনার গিটহাব ব্রাঞ্চ যদি master হয় তবে master লিখবেন
+  name: github
+  repo: bdkabirkhan001-alt/Web-series # আপনার GitHub username/repo_name
+  branch: main # repository-র শাখা (main/master)
 
 media_folder: "assets"
 public_folder: "/assets"
