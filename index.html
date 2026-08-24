@@ -6,8 +6,40 @@
 <title>SeriesHub — Hindi Web Series</title>
 <meta name="description" content="A modern Hindi web series catalog theme.">
 <link rel="stylesheet" href="assets/style.css">
+<style>
+  /* Video Modal Styles */
+  .video-modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.9);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+  }
+  .video-modal.active { display: flex; }
+  .video-box {
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .close-btn {
+    position: absolute;
+    top: 10px; right: 15px;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10000;
+  }
+  video { width: 100%; display: block; }
+</style>
 </head>
 <body>
+
 <div id="ageGate" class="age-gate">
   <div class="gate-card">
     <div class="logo">Series<span>Hub</span></div>
@@ -16,11 +48,13 @@
     <button id="enterBtn">I am 18+</button>
   </div>
 </div>
+
 <header class="topbar">
   <a class="logo" href="index.html">Series<span>Hub</span></a>
   <nav><a href="#latest">Latest</a><a href="#trending">Trending</a><a href="#genres">Genres</a></nav>
   <input id="search" type="search" placeholder="Search series...">
 </header>
+
 <main>
 <section class="hero">
   <div>
@@ -30,19 +64,34 @@
     <a class="btn" href="#latest">Browse Series</a>
   </div>
 </section>
+
 <section id="trending" class="section">
   <div class="section-head"><h2>Trending</h2></div>
   <div id="trendingGrid" class="grid"></div>
 </section>
+
 <section id="latest" class="section">
   <div class="section-head"><h2>Latest Series</h2></div>
   <div id="seriesGrid" class="grid"></div>
 </section>
+
 <section id="genres" class="section">
   <div class="section-head"><h2>Genres</h2></div>
   <div id="genresList" class="chips"></div>
 </section>
 </main>
+
+<!-- Video Player Popup Modal -->
+<div id="videoModal" class="video-modal">
+  <div class="video-box">
+    <span id="closeVideo" class="close-btn">&times;</span>
+    <video id="mainPlayer" controls controlsList="nodownload">
+      <source src="" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+
 <footer>© 2026 SeriesHub · Theme for GitHub Pages + Decap CMS</footer>
 <script src="assets/app.js"></script>
 </body>
